@@ -1,0 +1,161 @@
+@import url(reset.css);
+
+/* 큰 제목 폰트 : font-family: 'Rubik', sans-serif; */
+/* main.css */
+body{font-size: 12px;color: #000;font-family: sans-serif;}
+a{color: #666;text-decoration: none;}
+
+
+/* layout */
+.login_wrap{position: fixed;left: 0;top: 0;width: 100%;height: 100%;text-align: center;background-color: #fff;}
+    .login{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: #fff;}
+    .find_id,
+    .find_password,
+    .singup{display: none;position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: #fff;}
+
+/* login */
+.login_wrap .login{z-index: 10;}
+.login_wrap .login h2{display: block;width: 190px;margin: 0 auto;margin-top: 170px;}
+.login_wrap .login p{font-size: 12px;color: #48a1f8;}
+.login_wrap .login form{margin-top: 50px;}
+.login_wrap .login form ol li input{width: 240px;height: 40px;margin-bottom: 10px;text-indent: 10px;
+                            border: 1px solid #707070; border-radius: 7px;background: none !important;}
+.login_wrap .login form ol li:nth-of-type(3) a{display: block;width: 240px;height: 40px;margin: 0 auto 10px;
+                                    color: #fff;line-height: 40px; font-size: 14px;
+                                    border: none;border-radius: 7px;
+                                    background: #48a1f8 !important;cursor: pointer;}
+
+    /* input img */
+#__lpform_userID img,
+#__lpform_userPW img{display: none;opacity: 0 !important;}
+
+.login_wrap .sub_login{margin-top: 7px;}
+.login_wrap .sub_login ol{display: flex;justify-content: center;}
+.login_wrap .sub_login ol li{padding: 0 5px;}
+.login_wrap .sub_login ol li::after{content: "";display: inline-block;width: 1px;height: 10px;margin-left: 10px;background-color: #333;}
+.login_wrap .sub_login ol li:last-child{border: none;}
+.login_wrap .sub_login ol li:last-child::after{display: none;}
+.login_wrap .sub_login ol li a{font-size: 12px;color: #333;}
+
+.login_wrap .easy_login{margin-top: 175px;}
+.login_wrap .easy_login ol{display: flex;justify-content: center;}
+.login_wrap .easy_login ol li{width: 32px;height: 32px; margin: 15px 25px 0 0;}
+.login_wrap .easy_login ol li:last-child{margin-right: 0;}
+
+    /* login_close_btn */
+.login_wrap .login_close_btn{position: absolute;left: 10px;top: 10px; display: block;width: 26px;height: 26px;}
+.login_wrap .login_close_btn:after,
+.login_wrap .login_close_btn:before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 15px;height: 1px;background-color: #333;}
+.login_wrap .login_close_btn:after{transform: translate(-50%,-50%) rotate(-45deg);}
+.login_wrap .login_close_btn:before{transform: translate(-50%,-50%) rotate(45deg);}
+
+/* find_id */
+.login_wrap .find_id.on{z-index: 20;display: block;}
+.login_wrap .find_id.on h2{margin-top: 10px;font-size: 15px;}
+
+.login_wrap .find_id.on .find_list{display: flex;justify-content: space-between; width: 92%;margin: 50px auto 0;}
+.login_wrap .find_id.on .find_list a{display: block; width: 45%;height: 40px;
+                                color: #333;line-height: 40px;font-size: 14px;font-weight: 500;
+                                border: 1px solid #707070;border-radius: 7px;}
+.login_wrap .find_id.on .find_list a.on{color: #fff;background-color: #48a1f8;border: none;}
+
+.login_wrap .find_id.on div:nth-of-type(2) a{display: block; width: 92%;height: 40px;margin: 30px auto 0;
+                                        color: #333;line-height: 40px;font-size: 14px;font-weight: 500;
+                                        border: 1px solid #707070;border-radius: 7px;}
+
+.login_wrap .find_id.on .find_close_btn{position: absolute;left: 10px;top: 10px; display: block;width: 26px;height: 26px;}
+.login_wrap .find_id.on .find_close_btn::after,
+.login_wrap .find_id.on .find_close_btn::before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                                                background-color: #333;}
+                                                
+.login_wrap .find_id.on .find_close_btn::after{transform: translate(-50%,-50%) rotate(45deg);transform-origin: left;}
+.login_wrap .find_id.on .find_close_btn::before{transform: translate(-50%,-50%) rotate(-45deg);transform-origin: left;}
+
+/* find_password */
+.login_wrap .find_password.on{z-index: 20;display: block;}
+.login_wrap .find_password.on h2{margin-top: 10px;font-size: 15px;}
+
+.login_wrap .find_password.on .find_list{display: flex;justify-content: space-between; width: 92%;margin: 50px auto 0;}
+.login_wrap .find_password.on .find_list a{display: block; width: 45%;height: 40px;
+                                color: #333;line-height: 40px;font-size: 14px;font-weight: 500;
+                                border: 1px solid #707070;border-radius: 7px;}
+.login_wrap .find_password.on .find_list a.on{color: #fff;background-color: #48a1f8;border: none;}
+
+.login_wrap .find_password.on div:nth-of-type(2){width: 92%;margin: 30px auto 0;}
+.login_wrap .find_password.on div:nth-of-type(2) form ol li a{display: block; width: 100%;height: 40px;
+                                        color: #333;line-height: 40px;font-size: 14px;font-weight: 500;
+                                        border: 1px solid #707070;border-radius: 7px;}
+.login_wrap .find_password.on div:nth-of-type(2) form ol li input{width: 100%;height: 40px;margin-bottom: 10px;text-indent: 10px;
+                                                border: 1px solid #707070; border-radius: 7px;background: none !important;}
+                
+.login_wrap .find_password.on .find_close_btn{position: absolute;left: 10px;top: 10px; display: block;width: 26px;height: 26px;}
+.login_wrap .find_password.on .find_close_btn::after,
+.login_wrap .find_password.on .find_close_btn::before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                                                background-color: #333;}
+                                                
+.login_wrap .find_password.on .find_close_btn::after{transform: translate(-50%,-50%) rotate(45deg);transform-origin: left;}
+.login_wrap .find_password.on .find_close_btn::before{transform: translate(-50%,-50%) rotate(-45deg);transform-origin: left;}
+
+/* singup */
+.login_wrap .singup.on{z-index: 20;display: block;}
+.login_wrap .singup.on h2{margin-top: 10px;font-size: 15px;}
+
+.login_wrap .singup.on form{margin-top: 10px;width: 92%;margin: 0 auto;}    
+.login_wrap .singup.on form ol li input{width: 100%;height: 50px;text-indent: 10px;
+                            border: none; border-bottom: 1px solid #707070;box-sizing: border-box;
+                            background: none !important;}
+.login_wrap .singup.on form ol li input::placeholder{color: #707070;font-size: 12px;}
+.login_wrap .singup.on form ol li span{display: block;text-align: left;margin: 15px 0 10px 0;color: #707070;}
+.login_wrap .singup.on form ol li a{display: block; width: 100%;height: 40px;
+                                    color: #333;line-height: 40px;font-size: 14px;font-weight: 500;
+                                    border: 1px solid #707070;border-radius: 7px;box-sizing: border-box;}
+.login_wrap .singup.on form ol li:last-child a{height: 40px;margin-top: 20px;
+                                            font-size: 14px; color: #fff;text-indent: 20px;
+                                            border: none;border-radius: 7px;cursor: pointer;
+                                            background: #48a1f8 url(../img/check_w.png) no-repeat 40% -2px !important;background-size: 40px 40px !important;}
+
+.login_wrap .singup.on .singup_close_btn{position: absolute;left: 10px;top: 10px; display: block;width: 26px;height: 26px;}
+.login_wrap .singup.on .singup_close_btn::after,
+.login_wrap .singup.on .singup_close_btn::before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                                                background-color: #333;}
+                                                
+.login_wrap .singup.on .singup_close_btn::after{transform: translate(-50%,-50%) rotate(45deg);transform-origin: left;}
+.login_wrap .singup.on .singup_close_btn::before{transform: translate(-50%,-50%) rotate(-45deg);transform-origin: left;}
+
+/*
+        <div class="singup on">
+            <h2>회원가입</h2>
+
+            <form>
+            <fieldset>
+                <legend class="blind">비밀번호 찾기</legend>
+                <ol>
+                <li>
+                    <label for="userNAME" class="blind">이름</label>
+                    <input type="text" id="userNAME" required placeholder="이름" />
+                </li>
+                <li>
+                    <label for="userID" class="blind">아이디</label>
+                    <input type="text" id="userID" required placeholder="아이디" />
+                </li>
+                <li>
+                    <label for="userPW" class="blind">비밀번호</label>
+                    <input type="password" id="userPW" required placeholder="비밀번호" />
+                </li>
+                <li>
+                    <label for="PWcheck" class="blind">비밀번호 확인</label>
+                    <input type="password" id="PWcheck" required placeholder="비밀번호 확인" />
+                </li>
+                <li>
+                    <span>휴대폰</span>
+                    <a href="#">휴대폰 인증</a>
+                </li>
+                <li>
+                    <input type="submit" value="가입하기" formmethod="post" />
+                </li>
+                </ol>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+*/

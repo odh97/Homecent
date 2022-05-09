@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG 활용</title>
+</head>
+<body>
+    <!-- 1-1 방법 -->
+    <!-- <svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.16 340.16"><defs><style>.cls-1{fill:none;stroke:#5196d2;stroke-miterlimit:10;stroke-width:15px;}</style></defs><path class="cls-1" d="M245,270.38H95.2c-13.2,0-23.9-11.23-23.9-25.07V157.52a25.56,25.56,0,0,1,9-19.6l74.89-62.67a23,23,0,0,1,29.8,0l74.88,62.67a25.54,25.54,0,0,1,9,19.6v87.79C268.86,259.15,258.16,270.38,245,270.38Z"/></svg>-->
+
+    <!-- 2-1 방법 -->
+    <!-- <img src="Home_skyblue_icon.svg" alt="tabbaricon" /> -->
+
+    <!-- 3-1 방법 -->
+    <!-- <object data="Home_skyblue_icon.svg" type="image/svg+xml"></object> -->
+
+    <!-- 3-1 방법 응용 (svg 이미지가 활용 안될때 안에 있는 이미지로 대체) -->
+    <!-- <object src="Home_skyblue_icon.svg" type="image/svg+xml">
+        <img src="Home_skyblue_icon.jpg" alt="tabbaricon" />
+    </object> -->
+    <div class="alc" id="top-pencil">
+        <object>
+            <embed src="Home_skyblue_icon.svg" width="300px" height="300px"/>
+        </object>
+    </div>
+</body>
+</html>

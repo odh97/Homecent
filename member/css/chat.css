@@ -1,0 +1,157 @@
+@import url(reset.css);
+
+/* 큰 제목 폰트 : font-family: 'Rubik', sans-serif; */
+/* main.css */
+body{font-size: 12px;color: #000;font-family: sans-serif;}
+a{color: #666;text-decoration: none;}
+
+/* main-icon */
+@keyframes icon_1{
+    0%{stroke-dashoffset:550;stroke-dasharray:750;}
+    100%{stroke-dashoffset:0;stroke-dasharray:900;}
+}
+@keyframes icon_2{
+    0%{stroke-dashoffset:900;stroke-dasharray:800;}
+    100%{stroke-dashoffset:0;stroke-dasharray:900;}
+}
+@keyframes icon_2_2{
+    0%{stroke-dashoffset:-800;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_3{
+    0%{stroke-dashoffset:900;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_4{
+    0%{stroke-dashoffset:800;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_5{
+    0%{stroke-dashoffset:900;}
+    100%{stroke-dashoffset:0;}
+}
+
+/* layout */
+#wrap{width: 100%;}
+    header{width: 100%;}
+        .header_inner{z-index: 10;position: relative;left: 50%;top: 0;width: 93%;transform: translateX(-50%);}
+    .container{width: 100%;}
+        .content1{width: 93%;height: 100%;margin: 0 auto;}
+    .tab_bar{width: 100%;height: 70px;}
+
+
+/* header */
+.header_inner h2{position: absolute;left: 50%;top: 7px; font-size: 15px;transform: translateX(-50%); }
+
+/* containner */
+    /* content1 */
+article{position: relative;border-bottom: 1px solid #666;padding-top: 10px;height: 80px;}
+article:first-child{padding-top: 30px;}
+
+.article_inner{display: block;width: 100%;height: 100%; clear: both;}
+
+.article_inner .profileimg{float: left; width: 50px;height: 50px;margin-top: 15px;
+       border-radius: 50%;}
+
+article:nth-of-type(1) .profileimg{background: url(../img/profileimg/character_2.jpeg) no-repeat 50% 50%; background-size: cover;}
+article:nth-of-type(2) .profileimg{background: url(../img/profileimg/character_1.jpeg) no-repeat 50% 50%; background-size: cover;}
+article:nth-of-type(3) .profileimg{background: url(../img/profileimg/character_3.jpeg) no-repeat 50% 50%; background-size: cover;}
+article:nth-of-type(4) .profileimg{background: url(../img/profileimg/character_4.jpeg) no-repeat 50% 50%; background-size: cover;}
+article:nth-of-type(5) .profileimg{background: url(../img/profileimg/character_5.jpg) no-repeat 50% 50%; background-size: cover;}
+
+.article_inner > div:nth-of-type(2){float: left;margin: 20px 0 0 10px;}
+.article_inner > div:nth-of-type(2) > h3{margin-bottom: 5px;color: #000;font-size: 14px;line-height: 1.5;}
+.article_inner > div:nth-of-type(2) > h3 span{font-weight: 100;font-size: 10px;}
+.article_inner > div:nth-of-type(2) > h3 span span.brandicon{display: inline-block;width: 16px;height: 16px;margin: 0 3px;
+                                        border-radius: 50%;vertical-align: -2px;
+                                        background: url(../img/logo_icon.png) no-repeat 50% 50%;background-size: cover;}
+
+.article_inner > div:nth-of-type(2) > h3 span span.brandicon{background-color: #bebebe;}
+.article_inner.on > div:nth-of-type(2) > h3 span span.brandicon{background-color: #48A1F8;}
+
+.article_inner > div:nth-of-type(2) p{color: #000;}
+article:nth-of-type(1) span.new_talk{display: inline-block; width: 16px;height: 16px;margin-left: 3px;transform: scale(0.8);
+    color: #fff;font-size: 8px; text-align: center;line-height: 16px;
+    border-radius: 50%;background-color: #48A1F8;}
+.article_inner > .imgbox{float: right; width: 40px;height: 40px; margin-top: 20px;
+                border-radius: 5px; box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.5);}
+
+article:nth-of-type(1) .article_inner > .imgbox{background: url(../img/product/product_6.jpeg) no-repeat 45% 0;background-size: cover;}
+article:nth-of-type(2) .article_inner > .imgbox{background: url(../img/product/product_4.jpeg) no-repeat 0 0;background-size: cover;}
+article:nth-of-type(3) .article_inner > .imgbox{background: url(../img/product/product_1.jpg) no-repeat 0 0;background-size: cover;}
+article:nth-of-type(4) .article_inner > .imgbox{background: url(../img/product/product_2.jpg) no-repeat 0 70%;background-size: cover;}
+article:nth-of-type(5) .article_inner > .imgbox{background: url(../img/product/product_3.jpeg) no-repeat 0 0;background-size: cover;}
+
+/* tab_bar */
+.tab_bar_inner{position: fixed;left: 0;bottom: 0; width: 100%;height: 55px; background-color: #fff;}
+.tab_bar_inner ul{position: absolute;left: 50%;bottom: 10px;width: 93%;transform: translateX(-50%);
+         display: flex;justify-content: space-between;}
+.tab_bar_inner ul{background: #fff;}
+.tab_bar_inner ul li{position: relative;display: block;width: 45px;height: 45px;}
+.tab_bar_inner ul li a{position: absolute;width: 100%;height: 100%;}
+.tab_bar_inner ul li a:nth-of-type(1){display: block;}
+.tab_bar_inner ul li a:nth-of-type(2){display: none;}
+
+    /* tab_bar on */
+.tab_bar_inner ul li.on a:nth-of-type(1){display: none}
+.tab_bar_inner ul li.on a:nth-of-type(2){display: block;}
+
+    /* tab_bar 아이콘 애니메이션 패스 */
+.tab_bar_inner ul li.on .tab_bar_icon_1{
+    fill:none;
+    stroke:#5196d2;
+    stroke-width:15px;
+    stroke-miterlimit:10;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_1 1s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_2_1,
+.tab_bar_inner ul li.on .tab_bar_icon_2_2{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_2 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_2_2{stroke-linecap:round;animation : icon_2_2 1.0s linear forwards;}
+.tab_bar_inner ul li.on .tab_bar_icon_2_2:nth-of-type(3){animation-delay : 0.15s}
+.tab_bar_inner ul li.on .tab_bar_icon_2_2:nth-of-type(4){animation-delay : 0.3s}
+.tab_bar_inner ul li.on .tab_bar_icon_3,
+.tab_bar_inner ul li.on .tab_bar_icon_3{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_3 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_3{stroke-linecap:round;}
+.tab_bar_inner ul li.on .tab_bar_icon_4{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_4 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_5{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_5 1.3s linear forwards;
+    }
+
+

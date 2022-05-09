@@ -1,0 +1,29 @@
+
+
+
+<svg id="layer_1" data-name="layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.16 340.16">
+
+<defs>
+<style>
+
+.cls-1{
+    fill:none;
+    stroke:#5196d2;
+    stroke-width:15px;
+    stroke-miterlimit:10;
+    stroke-dasharray:700;
+    stroke-dashoffset:700;
+    stroke-opacity:0;
+    animation : dash 1s linear forwards;
+    }
+
+    @keyframes dash{
+        0%{stroke-dashoffset:550;stroke-opacity:0}
+        100%{stroke-dashoffset:0;stroke-opacity:1}
+    }
+
+</style>
+</defs>
+
+<path class="cls-1" d="M245,270.38H95.2c-13.2,0-23.9-11.23-23.9-25.07V157.52a25.56,25.56,0,0,1,9-19.6l74.89-62.67a23,23,0,0,1,29.8,0l74.88,62.67a25.54,25.54,0,0,1,9,19.6v87.79C268.86,259.15,258.16,270.38,245,270.38Z"/></svg>
+

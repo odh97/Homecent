@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 상태 바의 색상을 정하는 코드 -->
+<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />
+<!-- 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!-- 바로가기 아이콘, 아이폰, 안드로이드 둘다 적영 -->
+<link rel="apple-touch-icon-precomposed"href=".png" />
+<!-- 인트로 화면을 설정하는 코드 -->
+<link rel="apple-touch-startup-image" href="/img/intro/imtro.png" />
+<title>Homecent - mypage</title>
+<link rel="stylesheet" href="css/login.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+    <!-- login -->
+    <div class="login_wrap">
+        <div class="login">
+            <h2><img src="img/logo_txt.png" alt="Homecent" /></h2>
+            <p>믿을 수 있는 가전제품 중고거래 앱</p>
+            <form method="post">
+            <fieldset>
+                <legend class="blind">로그인</legend>
+                <ol>
+                <li>
+                    <label for="userID" class="blind">아이디</label>
+                    <input type="text" id="userID" required placeholder="아이디" />
+                </li>
+                <li>
+                    <label for="userPW" class="blind">비밀번호</label>
+                    <input type="password" id="userPW" required placeholder="비밀번호" />
+                </li>
+                <li>
+                    <a href="member/index.html">로그인</a>
+                    <!-- <input type="submit" value="로그인" /> -->
+                </li>
+                </ol>
+            </fieldset>
+            </form>
+            <div class="sub_login">
+                <h3 class="blind">아이디 찾기 및 가입하기</h2>
+                <ol>
+                <li><a href="#">아이디 찾기</a></li>
+                <li><a href="#">비밀번호 찾기</a></li>
+                <li><a href="#">회원가입</a></li>
+                </ol>
+            </div>
+            <div class="easy_login">
+                <h3>간편 로그인</h2>
+                <ol>
+                <li><a href="#"><img src="img/brand_icon_kakao.png" alt="kakao" /></a></li>
+                <li><a href="#"><img src="img/brand_icon_naver.png" alt="naver" /></a></li>
+                <li><a href="#"><img src="img/brand_icon_facebook.png" alt="facebook" /></a></li>
+                </ol>
+            </div>
+            <a href="index.html" class="login_close_btn"></a>
+        </div>
+        <div class="find_id">
+            <h2>아이디 찾기</h2>
+            <div class="find_list">
+                <a class="on" href="#">아이디 찾기</a>
+                <a href="#">비밀번호 찾기</a>
+            </div>
+            <div>
+                <a href="#">휴대폰 인증</a>
+            </div>
+            <a href="#" class="find_close_btn"></a>
+        </div>
+        <div class="find_password">
+            <h2>비밀번호 찾기</h2>
+            <div class="find_list">
+                <a href="#">아이디 찾기</a>
+                <a class="on" href="#">비밀번호 찾기</a>
+            </div>
+            <div>
+                <form>
+                <fieldset>
+                    <legend class="blind">비밀번호 찾기</legend>
+                    <ol>
+                    <li>
+                        <label for="findID" class="blind">아이디</label>
+                        <input type="text" id="findID" required placeholder="아이디" />
+                    </li>
+                    <li>
+                        <a href="#">휴대폰 인증</a>
+                    </li>
+                    </ol>
+                </fieldset>
+                </form>
+            </div>
+            <a href="#" class="find_close_btn"></a>
+        </div>
+        <div class="singup">
+            <h2>회원가입</h2>
+            <form>
+            <fieldset>
+                <legend class="blind">비밀번호 찾기</legend>
+                <ol>
+                <li>
+                    <label for="userNAME" class="blind">이름</label>
+                    <input type="text" id="userNAME" required placeholder="이름" />
+                </li>
+                <li>
+                    <label for="singupID" class="blind">아이디</label>
+                    <input type="text" id="singupID" required placeholder="아이디" />
+                </li>
+                <li>
+                    <label for="singupPW" class="blind">비밀번호</label>
+                    <input type="password" id="singupPW" required placeholder="비밀번호" />
+                </li>
+                <li>
+                    <label for="checkPW" class="blind">비밀번호 확인</label>
+                    <input type="password" id="checkPW" required placeholder="비밀번호 확인" />
+                </li>
+                <li>
+                    <span>휴대폰</span>
+                    <a href="#">휴대폰 인증</a>
+                </li>
+                <li>
+                    <a href="member/index.html">가입하기</a>
+                    <!-- <input type="submit" value="가입하기" formmethod="post" /> -->
+                </li>
+                </ol>
+            </fieldset>
+            </form>
+            <a href="#" class="singup_close_btn"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

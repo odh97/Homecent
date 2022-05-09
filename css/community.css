@@ -1,0 +1,279 @@
+@import url(reset.css);
+
+/* 큰 제목 폰트 : font-family: 'Rubik', sans-serif; */
+/* main.css */
+body{font-size: 12px;color: #000;font-family: sans-serif;}
+a{color: #666;text-decoration: none;}
+
+/* main-icon */
+@keyframes icon_1{
+    0%{stroke-dashoffset:550;stroke-dasharray:750;}
+    100%{stroke-dashoffset:0;stroke-dasharray:900;}
+}
+@keyframes icon_2{
+    0%{stroke-dashoffset:900;stroke-dasharray:800;}
+    100%{stroke-dashoffset:0;stroke-dasharray:900;}
+}
+@keyframes icon_2_2{
+    0%{stroke-dashoffset:-800;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_3{
+    0%{stroke-dashoffset:900;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_4{
+    0%{stroke-dashoffset:800;}
+    100%{stroke-dashoffset:0;}
+}
+@keyframes icon_5{
+    0%{stroke-dashoffset:900;}
+    100%{stroke-dashoffset:0;}
+}
+
+/* layout */
+#wrap{width: 100%;}
+    header{width: 100%;}
+        .header_inner{z-index: 10;position: relative;left: 50%;top: 0;width: 93%;transform: translateX(-50%);}
+    .container{width: 100%;}
+        .content1{width: 93%;height: 100%;margin: 0 auto;}
+    .tab_bar{width: 100%;height: 70px;}
+
+
+/* header */
+.header_inner h2{position: absolute;left: 50%;top: 7px; font-size: 15px;transform: translateX(-50%); }
+
+.allmenu_btn{position: absolute;right: 0;}
+.allmenu_btn a{position: relative;display: block; width: 30px;height: 30px;}
+.allmenu_btn a span{position: absolute; left: 50%;top: 50%; display: block;transform: translate(-50%,50%);background-color: #5196d2; }
+.allmenu_btn a span span{display: block; width: 15px;height: 1px;
+                        background-color: #333;}
+.allmenu_btn a span span::after{content: "";display: block;width: 15px;height: 1px;margin-top: -11px;
+                        background-color: #333;}
+.allmenu_btn a span span:before{content: "";display: block;width: 15px;height: 1px;margin-top: 5px;
+                        background-color: #333;}
+
+.srch_btn{position: absolute;right: 35px;width: 30px;height: 30px;}
+.srch_btn a{display: block;width: 30px;height: 30px;}
+.srch_btn a span{position: absolute;left: 50%; top: 50%;width: 24px;height: 24px;transform: translate(-50%, -50%) scale(0.6);
+        background: url(../img/btn_gnb_search.png) no-repeat 0 -24px;}
+
+.popularity{width: 93%;height: 80px;margin: 0 auto;} 
+.popularity a{float: left;display: block;width: 50%;height: 40px;margin-top: 40px;border-bottom: 2px solid #333;
+            color: #333;font-size: 15px;text-align: center; line-height: 40px;} 
+
+.popularity a.on{color: #5196d2;border-color: #5196d2;}
+/* containner */
+    /* content1 */
+article{border-bottom: 1px solid #666;}
+.article_inner{position: relative;display: block;width: 100%;padding-top: 10px;}
+.article_inner > h4{margin-bottom: 5px;color: #000;font-size: 15px;line-height: 1.5;}
+.article_inner > p:nth-of-type(1){color: #333;font-size: 14px; line-height: 1.3;font-weight: 300;}
+.article_inner > .imgbox{width: 100%;height: 140px; margin-top: 20px;
+    border-radius: 10px; box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.5);}
+
+article:nth-of-type(1) .article_inner > .imgbox{background: url(../img/product/product_5.jpg) no-repeat 0 -70px;background-size: cover;}
+article:nth-of-type(2) .article_inner > .imgbox{background: url(../img/product/product_4.jpeg) no-repeat 0 -30px;background-size: cover;}
+
+.more_infor{margin-top: 10px;}
+.more_infor > p{display: inline-block;}
+    .more_infor > p span{vertical-align: top; display: inline-block;}
+.more_infor > p:nth-of-type(1) span{width: 20px;height: 20px; background: url(../img/like_icon_w.png) no-repeat 0 -3px;background-size: cover;cursor: pointer;}
+.more_infor > p:nth-of-type(2) span{width: 25px;height: 25px; background: url(../img/comment_icon.png) no-repeat 0 -5px;background-size: cover;}
+.more_infor > span{float: right;}
+
+.category{position: absolute;right: 0;top: 14px;padding: 0 7px;
+    color: #333;font-size: 10px; background-color: #c5c5c5; border-radius: 8px;}
+    /* content1 on */
+.more_infor> p .like.on{background-image: url(../img/like_icon_r.png);}
+
+
+
+
+
+
+/*
+        <!-- content1 -->
+        <div class="content1">
+            <article>
+                <div class="article_inner">
+                    <h4>노트북 구매할려고 하는데 기종 추천 부탁...</h4>
+                    <p>일단 기본적으로 노트북으로 간단한 게임..</p>
+                    <div class="imgbox"></div>
+                    <div class="more_infor">
+                        <p><span></span>좋아요 11</p>
+                        <p><span></span>댓글 30</p>
+                        <span>10분 전</span>
+                    </div>
+                    <span class="category">노트북</span>
+                </div>
+            </article>
+            <article>
+                <div class="article_inner">
+                    <h4>이번에 새로 거래한 키보드!!</h4>
+                    <p>저번부터 사고 싶었는데 이번에 중고로 저렴...</p>
+                    <div class="imgbox"></div>
+                    <div class="more_infor">
+                        <p><span></span>좋아요 11</p>
+                        <p><span></span>댓글 30</p>
+                        <span>32분 전</span>
+                    </div>
+                    <span class="category">PC장비</span>
+                </div>
+            </article>
+            <article>
+                <div class="article_inner">
+                    <h4>가성비 좋은 태블릿 추천해주세요</h4>
+                    <p>주요 노트북을 가지고 있는 상황에서<br />
+                        필기용으로만 쓸 태블릿을 구매하려 합니다.<br />
+                        주 목적이 필기 용이기 때문에<br />
+                        웬만하면 삼성 제품 쪽에서 가성비 좋은 제품으로 추천 부..</p>
+                    <div class="more_infor">
+                        <p><span></span>좋아요 2</p>
+                        <p><span></span>댓글 </p>
+                        <span>3시간 전</span>
+                    </div>
+                    <span class="category">휴대폰 / 태블릿</span>
+                </div>
+            </article>
+        </div>
+        <!-- //content1 -->
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* search */
+.search{visibility: hidden;z-index: -1;position: fixed;left: 0;top: -100%;width: 100%;height: 100%;background: #fff;}
+
+.srch_inner{width: 90%; margin: 0 auto;}
+.srch_inner .srch_box{position: relative;top: 10px;width: 100%;}
+
+.srch_box .srch_close{position: relative;display: block;width: 26px;height: 26px;}
+.srch_box .srch_close:after{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                    background-color: #333;
+                    transform: translate(-50%,-50%) rotate(-45deg);transform-origin: left;}
+.srch_box .srch_close:before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                    background-color: #333;
+                    transform: translate(-50%,-50%) rotate(45deg);transform-origin: left;}
+
+
+.srch_box input{position: absolute;right: 0;top: 0;width: 290px;height: 26px;
+            text-indent: 10px;font-size: 12px;
+            background: #f8f8f8;
+            border: none;border-radius: 13px;}
+
+    /* IE의 경우 input search x 모양 지우기*/
+.srch_box input::-ms-clear,
+.srch_box input::-ms-reveal{display:none;}
+    /* 크롬의 경우 input search x 모양 지우기*/
+.srch_box input::-webkit-search-decoration,
+.srch_box input::-webkit-search-cancel-button,
+.srch_box input::-webkit-search-results-button,
+.srch_box input::-webkit-search-results-decoration{display:none;}
+
+.srch_box button{position: absolute;right: 10px;top: 2px;width: 20px;height: 20px;transform: scale(0.8);
+            background: transparent url(../img/btn_gnb_search.png) no-repeat 0 100%;background-size: cover;
+            border: none;
+            cursor: pointer;text-indent: -9999px;overflow: hidden;}
+
+.srch_history{display: block;clear: both;height: 65px;margin-top: 30px;border-bottom: 1px solid #bebebe;}
+.srch_history h3{font-size: 15px;margin-bottom: 12px;}
+.srch_history a{display: inline-block;height: 22px; padding: 0 13px;
+            line-height: 22px;
+            border: 1px solid #666;border-radius: 13px;}
+
+.srch_popularity{display: block;clear: both;height: 65px;margin-top: 7px;}
+.srch_popularity h3{font-size: 15px;margin-bottom: 12px;}
+.srch_popularity a{display: inline-block;height: 22px; padding: 0 13px;
+                line-height: 22px;
+                border: 1px solid #666;border-radius: 13px;}
+
+    /* search on */
+.search.on{z-index: 10;top: 0;visibility: visible;transition: all 0.5s ease;}
+
+/* tab_bar */
+.tab_bar_inner{position: fixed;left: 0;bottom: 0; width: 100%;height: 55px; background-color: #fff;}
+.tab_bar_inner ul{position: absolute;left: 50%;bottom: 10px;width: 93%;transform: translateX(-50%);
+         display: flex;justify-content: space-between;}
+.tab_bar_inner ul{background: #fff;}
+.tab_bar_inner ul li{position: relative;display: block;width: 45px;height: 45px;}
+.tab_bar_inner ul li a{position: absolute;width: 100%;height: 100%;}
+.tab_bar_inner ul li a:nth-of-type(1){display: block;}
+.tab_bar_inner ul li a:nth-of-type(2){display: none;}
+
+    /* tab_bar on */
+.tab_bar_inner ul li.on a:nth-of-type(1){display: none}
+.tab_bar_inner ul li.on a:nth-of-type(2){display: block;}
+
+    /* tab_bar 아이콘 애니메이션 패스 */
+.tab_bar_inner ul li.on .tab_bar_icon_1{
+    fill:none;
+    stroke:#5196d2;
+    stroke-width:15px;
+    stroke-miterlimit:10;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_1 1s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_2_1,
+.tab_bar_inner ul li.on .tab_bar_icon_2_2{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_2 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_2_2{stroke-linecap:round;animation : icon_2_2 1.0s linear forwards;}
+.tab_bar_inner ul li.on .tab_bar_icon_2_2:nth-of-type(3){animation-delay : 0.15s}
+.tab_bar_inner ul li.on .tab_bar_icon_2_2:nth-of-type(4){animation-delay : 0.3s}
+.tab_bar_inner ul li.on .tab_bar_icon_3,
+.tab_bar_inner ul li.on .tab_bar_icon_3{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_3 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_3{stroke-linecap:round;}
+.tab_bar_inner ul li.on .tab_bar_icon_4{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_4 1.3s linear forwards;
+    }
+.tab_bar_inner ul li.on .tab_bar_icon_5{
+    fill:none;
+    stroke:#5196d2;
+    stroke-miterlimit:10;
+    stroke-width:15px;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    stroke-opacity:1;
+    animation : icon_5 1.3s linear forwards;
+    }
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 상태 바의 색상을 정하는 코드 -->
+<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />
+<!-- 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- 바로가기 아이콘, 아이폰, 안드로이드 둘다 적영 -->
+<link rel="apple-touch-icon-precomposed"href=".png" />
+<!-- 인트로 화면을 설정하는 코드 -->
+<link rel="apple-touch-startup-image"href=".png" />
+<title>Homecent - chating</title>
+<link rel="stylesheet" href="css/chating.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/chating.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <h1 class="blind">Homecent</h1>
+    <!-- header -->
+    <header>
+        <div class="header_inner">
+            <div class="chating_out"><a href="chat.html"></a></div>
+            <h2>달콩</h2>
+        </div>
+        <div class="product">
+            <span class="product_img"></span>
+            <div class="product_explanation">
+                <h3>삼성 커브드 27인치 모니터</h3>
+                <span>150,000원</span>
+                <ul>
+                <li class="on">보증서</li>
+                <li>인증중고</li>
+                <li>후기 작성</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <hr />
+    <!-- container -->
+    <div class="container">
+        <!-- content1 -->
+        <section class="content1">
+            <article class="chat_box other">
+                <a href="#" class="other_img">프로필 사진</a>
+                <div class="other_info">
+                    <span class="profile_name">달콩</span>  
+                    <span class="chat">
+                        안녕하세요! 구매 원해서 연락드<br />
+                        렸습니다 혹시 모니터에 제품명<br />
+                        있는 스티커 볼 수 있을까요??
+                    </span>  
+                </div>
+            </article>
+            <article class="chat_box my">
+                <span class="chat">
+                    아 안녕하세요 박스는 없어서<br />
+                    모니터 그대로 들고 가셔야 하는데<br />
+                    괜찮으세요??
+                </span>
+            </article>
+            <article class="chat_box my">
+                <img class="chat" src="img/product/product_6_1.jpeg" alt="제품 이미지" />
+            </article>
+            <article class="chat_box other">
+                <a href="#" class="other_img">프로필 사진</a>
+                <div class="other_info">
+                    <span class="profile_name">달콩</span>  
+                    <span class="chat">
+                        네 자차라 괜찮아요! 날짜 잡을까요?
+                    </span>
+                </div>
+            </article>
+            <article class="chat_box my">
+                <div class="promise">
+                    <div class="place">
+                        <div class="imgbox"></div>
+                        <span>대학동 CU 편의점<br/>
+                            <em>관악구 대학동 00-0</em>
+                        </span>
+                    </div>
+                    <div class="map_check">
+                        <a href="#">장소 확인</a>
+                        <a href="#">길 안내</a>    
+                    </div>
+                </div>
+            </article>
+            <article class="chat_box my">
+                <div class="promise">
+                    <div class="time">
+                        <div class="imgbox"></div>
+                        <span>약속 잡기<br/>
+                            <em>2022-02-04 오후 7시까지</em>
+                        </span>
+                    </div>
+                     <div class="time_check">
+                         <a href="#">확인</a>
+                         <a href="#">다시 정하기</a>
+                     </div>
+                </div>
+             </article>
+        </section>
+        <!-- //content1 -->
+    </div>
+    <!-- //container -->
+    <hr />
+    <!-- footer -->
+    <footer>
+        <div class="footer_inner">
+            <a class="plus_btn" href="#"><img src="img/plus_btn.png" alt="plus_btn" /></a>
+            <form>
+                <fieldset class="text_box">
+                <legend class="blind">채팅 입력창</legend>
+                <label for="message" class="blind">채팅 입력</label>
+                <input type="text" id="message" placeholder="메세지를 입력해주세요" />
+                <button>버튼이여</button>
+                </fieldset>
+            </form>
+        </div>
+    </footer>
+    <!-- //footer -->
+</div>
+</body>
+</html>
