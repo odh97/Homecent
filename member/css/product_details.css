@@ -1,0 +1,87 @@
+@import url(reset.css);
+
+/* 큰 제목 폰트 : font-family: 'Rubik', sans-serif; */
+/* main.css */
+body{font-size: 12px;color: #000;font-family: sans-serif;}
+a{color: #666;text-decoration: none;}
+
+/* layout */
+#wrap{width: 100%;}
+    header{width: 100%;}
+        .header_inner{z-index: 10;position: relative;top: 0;width: 100%;}
+    .container{width: 100%;padding-bottom: 50px;}
+        .content1{width: 100%;height: 100%;margin: 0 auto;}
+    .tab_bar{position: fixed;left: 0;bottom: 0; width: 100%;height: 50px;border-top: 1px solid #666;background-color: #fff;}
+
+
+/* header */
+.header_inner .details_out a{position: absolute;left: 0px;top: 10px; display: block;width: 26px;height: 26px;}
+.header_inner .details_out a:after{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                    background-color: #333;
+                    transform: translate(-50%,-50%) rotate(-45deg);transform-origin: left;}
+.header_inner .details_out a:before{content: "";display: block;position: absolute;left: 50%;top: 50%;width: 10px;height: 1px;
+                    background-color: #333;
+                    transform: translate(-50%,-50%) rotate(45deg);transform-origin: left;}
+
+/* containner */
+    /* content1 */
+.content1 > div:not(.imgbox){width: 93%;transform: translateX(3.5%); padding: 5px 0;border-bottom: 1px solid #333;}
+.content1 > div:last-child{border: none;}
+.imgbox{width: 100%;height: 390px;background: url(../img/product/product_6.jpeg) no-repeat 45% 0;background-size: cover;}
+
+.information{display: flex;align-items: center;}
+.information .member_img{height: 35px;width: 35px;
+                    border-radius: 50%;
+                    background: url(../img/profileimg/character_6.jpeg) no-repeat 50% 50%;background-size: cover;}
+.information div:nth-of-type(2){width: 75%;margin-left: 5px;}
+.information div:nth-of-type(2) span{display: block;}
+.information .member_score{margin: 0 auto;}
+.information .member_score span{font-size: 10px;}
+.information .member_score .score_bar{width: 100%;height: 1px;background: #bebebe;}
+.information .member_score .score_bar::after{content: '';display: block;width: 84%;height: 1px;background: #666;}
+
+.explanation{}
+.explanation h2{font-size: 15px;font-weight: 500;margin-bottom: 7px;}
+.explanation p{font-size: 14px;font-weight: 300;line-height: 25px;}
+.explanation .keyword{margin-top: 15px;}
+.explanation .keyword ol{display: flex;margin-top: 5px;}
+.explanation .keyword ol li{height: 18px;margin-right: 5px;padding: 0 10px;
+    color: #fff;text-align: center;font-size: 12px;line-height: 18px;
+    border-radius: 3px;background: #808080;}
+
+
+
+
+.details{}
+.details > div{margin-top: 7px;}
+.details > div a{padding: 1px 5px;color: #fff;border-radius: 3px;background-color: #48a1f8;}
+.details > div:last-child{margin: 13px 0 7px;color: #bebebe;}
+
+
+
+/* tab_bar */
+.tab_bar{}
+.tab_bar .tab_bar_inner{display: flex;align-items: center;justify-content: space-between;
+    width: 93%;transform: translateX(3.5%);}
+.tab_bar .tab_bar_inner .like{cursor: pointer;display: block;width: 30px;height: 30px;margin-top: 5px;
+    background: url(../img/like_icon_w.png) no-repeat 0 0; background-size: cover;}
+.tab_bar .tab_bar_inner div{width: 90%;margin-top: 5px;}
+.tab_bar .tab_bar_inner div span.price{float: left;font-size: 15px;line-height: 32px;text-indent: 10px;
+    border-left: 1px solid #666;}
+.tab_bar .tab_bar_inner div a{float: right;width: 130px;height: 32px;
+    line-height: 30px;text-align: center;font-size: 15px;color: #fff;
+    border-radius: 5px;background: #48a1f8;}
+
+    /* tab_bar on */
+.tab_bar .tab_bar_inner .like.on{background-image: url(../img/like_icon_r.png);}
+
+
+
+
+
+
+
+
+
+
+

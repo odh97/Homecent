@@ -11,7 +11,8 @@ a{color: #666;text-decoration: none;}
         .header_inner{position: relative;width: 93%;height: 25px;margin: 0 auto 3px;padding-top: 10px;border-bottom: 1px solid #bebebe;}
     .container{width: 100%;padding-top: 108px;}
         .content1{width: 93%;height: 100%;margin: 0 auto;}
-    footer{position: fixed;left: 0;bottom: 0;width: 100%; height: 40px; background: #e5e5e5;}
+    footer{transition: all 0.3s linear;position: fixed;left: 0;bottom: 0;width: 100%; height: 40px; background: #e5e5e5;}
+    footer.on{height: 160px;}
         .footer_inner{width: 93%;margin: 0 auto;}
 
 /* header */
@@ -79,13 +80,29 @@ article{position: relative;margin: 10px 0;}
 .my .promise div:nth-of-type(2) a:nth-of-type(1)::after{content: "";float: right; height: 16px; border-right: 1px solid #bebebe;}
 .my .promise div:nth-of-type(2) a{width: 50%;padding: 5px;
                     color: #bebebe;text-align: center;background: #fff;}
-                    
-.footer_inner a{display: inline-block;width: 17px;height: 17px;margin-top: 7px;}
-.footer_inner a img{display: block;width: 15px;height: 15px;margin: 1px auto 0;}
+      
+.footer_inner > a{transition: all 0.3s linear;display: inline-block;width: 20px;height: 20px;margin-top: 5px;}
+.footer_inner > a .iconimg{transition: all 0.3s linear;display: block;width: 20px;height: 20px;margin: 0 auto 0;
+                        background: url(../img/plus_btn.png) no-repeat 50% 50%;background-size: cover;}
 .footer_inner form{float: right;display: inline-block;width: 90%; margin-top: 5px;}
 .footer_inner form input{border-radius: 10px; width: 85%;height: 20px; border: 1px solid #bebebe; text-indent: 10px;}
 .footer_inner form button{float: right;text-indent: -9999px;overflow: hidden;width: 20px;
     border: none;background: url(../img/msg-btn.png) no-repeat 50% 50%;background-size: 30px 30px;}
+footer .footer_inner div{display: none;}
+
+footer.on .footer_inner > a{border: 1px solid #bebebe;border-radius: 2px;background-color: #bababa;}
+footer.on .footer_inner > a .iconimg{transform: rotateZ(45deg);background: url(../img/plus_btn_w.png) no-repeat 0 0;background-size: cover;}
+footer.on .footer_inner div{display: block;margin-top: 15px;}
+footer.on .footer_inner div ol{display: flex;justify-content: center;width: 100%;margin-top: 10px;}
+footer.on .footer_inner div ol li{margin: 0 30px;text-align: center;}
+footer.on .footer_inner div ol li a{display: block;width: 30px;height: 30px;margin: 0 auto 3px;border-radius: 50%;
+    background: url(../img/plus_icon_1.png) no-repeat 50% 50%;background-size: cover;}
+footer.on .footer_inner div ol:first-child li:nth-of-type(1) a{background-image: url(../img/plus_icon_1.png);}
+footer.on .footer_inner div ol:first-child li:nth-of-type(2) a{background-image: url(../img/plus_icon_2.png);}
+footer.on .footer_inner div ol:first-child li:nth-of-type(3) a{background-image: url(../img/plus_icon_3.png);}
+
+footer.on .footer_inner div ol:last-child li:nth-of-type(1) a{background-image: url(../img/plus_icon_4.png);}
+footer.on .footer_inner div ol:last-child li:nth-of-type(2) a{background: #48A1F8 url(../img/promise-icon1.png)no-repeat -1px 0;background-size: cover;}
 
 
 
@@ -93,4 +110,3 @@ article{position: relative;margin: 10px 0;}
 
 
 
-footer.on{}
